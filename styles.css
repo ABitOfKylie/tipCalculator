@@ -66,7 +66,7 @@ button:active {
     top: 1px;
 }
 
-#totalTip {
+#totalTip, #splitBill {
     font-size: 50px;
     margin-top: 40px;
 }
@@ -79,7 +79,20 @@ button:active {
     text-transform: uppercase;
 }
 
+#splitBill:before {
+    content: "Total incl. tip";
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    text-transform: uppercase;
+}
+
 #totalTip sup {
+    font-size: 24px;
+    top: -18px;
+}
+
+#splitBill sup {
     font-size: 24px;
     top: -18px;
 }
@@ -90,7 +103,11 @@ button:active {
     display: block;
 }
 
-
+#splitBill small {
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+}
 
 
 
