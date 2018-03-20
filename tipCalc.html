@@ -1,59 +1,58 @@
 <!doctype html>
 <html>
 
-    <head>
-        <title>Tip Calculator</title>
-        
-        <link rel="stylesheet" type="text/css" href="normalize.css">
-        
-        <link rel="stylesheet" type="text/css" href="styles.css">
-    </head>
-    
-    <body>
-        
-        <div id="container">
-            <h1>Tip Calculator</h1>
-            
-            <div id="calculator">
-                
-                <form>
-                    <label>
-                        How much was your bill?<br>
-                        $ <input type="number" step="0.01" placeholder="00.00" id="billAmount">
-                    </label>
-                    <label>
-                        How was your service?<br>
-                        <select id="serviceQuality">
-                            <option disabled selected value="0">-- Choose an option --</option>
-                            <option value="0.3">30% - Outstanding</option>
-                            <option value="0.2">20% - Good</option>
-                            <option value="0.15">15% - It was okay</option>
-                            <option value="0.1">10% - Bad</option>
-                            <option value="0.05">5% - Terrible</option>
-                        </select>
-                    </label>
-                    <label>
-                        How many people are sharing the bill?<br>
-                        <input type="number" id="totalPeople"> people
-                    </label>
-                    <button type="button" id="calculate">Calculate Tip!</button>
-                    <button type="button" id="calcSplit">Split Bill!</button>
-                </form>
-                
-            </div><!-- calculator -->
-            
-            <div id="totalTip">
-                <sup>$</sup><span id="tip">0.00</span>
-                <small id="each">per person</small>
-            </div><!-- totalTip -->
-            <div id="splitBill">
-                <sup>$</sup><span id="split">0.00</span>
-                <small id="each">per person</small>
-            </div><!-- totalSplit -->
-        </div><!-- container -->
-        
-        <script type="text/javascript" src="app.js"></script>
-    </body>
-    
-</html>
+<head>
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
 
+<body>
+    <div id="container">
+        <h1>Tip Calculator</h1>
+        <div id="calculator">
+            <form>
+                <label>
+                    How much was your bill?
+                    <br>
+                    <span id="dollarSign">$</span>
+                    <input type="number" step="0.01" placeholder="00.00" id="billAmount">
+                </label>
+                <label>
+                    How was your service?
+                    <br>
+                    <select id="serviceQuality">
+                        <option disabled selected value="0">-- Choose an option --</option>
+                        <option value="0.3">30% - Outstanding</option>
+                        <option value="0.2">20% - Good</option>
+                        <option value="0.15">15% - It was okay</option>
+                        <option value="0.1">10% - Bad</option>
+                        <option value="0.05">5% - Terrible</option>
+                    </select>
+                </label>
+                <label>
+                    How many people are sharing the bill?
+                    <br>
+                    <input type="number" id="totalPeople"> <span id="person_people">people</span>
+                </label>
+                <button type="button" id="calculate">Calculate Tip!</button>
+                <button type="button" id="calcSplit">Split Bill!</button>
+            </form>
+        </div>
+        <!-- calculator -->
+        <div id="totalTip">
+            <sup>$</sup><span id="tip">0.00</span>
+            <small id="each">per person</small>
+        </div>
+        <!-- totalTip -->
+        <div id="splitBill">
+            <sup>$</sup><span id="split">0.00</span>
+            <small id="each">per person</small>
+        </div>
+        <!-- totalSplit -->
+    </div>
+    <!-- container -->
+    <script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>
