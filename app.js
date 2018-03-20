@@ -11,7 +11,7 @@ function calculateTip() {
     var numPeople = document.getElementById("totalPeople").value;
 
     // Quick validation
-    if (billAmount === "" || serviceQuality == 0) {
+    if (billAmount === "" || billAmount <1 || serviceQuality == 0) {
         window.alert("Please enter both the bill amount and the level of service quality to continue!");
         return; // this will prevent the function from continuing
     }
@@ -51,7 +51,7 @@ function calcSplitBill() {
     var numPeople = document.getElementById("totalPeople").value;
 
     // Quick validation
-    if (billAmount < 1 || serviceQuality == 0) {
+    if (billAmount === "" || billAmount <1 || serviceQuality == 0) {
         window.alert("Please enter both the bill amount and the level of service quality to move forward!");
         return; // this will prevent the function from continuing
     }
@@ -63,8 +63,9 @@ function calcSplitBill() {
     }
 
     // Check to see if this input is empty or less than or equal to 1, then do NOT display 'each'
-    if (numPeople === 1) {
+    if (numPeople <= 1) {
         window.alert("Looks like you are the only one footing the bill");
+        // show person if user chooses 1
         document.getElementById("person_people").innerHTML = "person";
         document.getElementById("each").style.display = "none";
     } else {
@@ -98,7 +99,7 @@ document.getElementById("splitBill").style.display = "none";
 document.getElementById("each").style.display = "none";
 
 // on click calculate the tip
-document.getElementById("calculate").onclick = function() { calculateTip(); };
+document.getElementById("calcTip").onclick = function() { calculateTip(); };
 
 // on click calculate total bill plus tip divided by num people
 document.getElementById("calcSplit").onclick = function() { calcSplitBill(); };
